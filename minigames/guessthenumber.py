@@ -1,9 +1,6 @@
 import random
-from configparser import ConfigParser
 import time
 from modules.langSelect import lang
-config = ConfigParser()
-path = "settings.ini"
 
 def guess():
     a = 1
