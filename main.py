@@ -12,10 +12,13 @@ from modules.langSelect import lang
 
 from minigames.guessthenumber import guess as guess
 from minigames.dice import dice as dice
+from minigames.rockpaperscissors import rps as rps
 
-print(lang['gamechoose'], lang['game1'], lang['game2'], sep='\n')
+print(lang['gamechoose'], lang['game1'], lang['game2'], lang['game3'], sep='\n')
 game = int(input())
 if game == 1:
     guess()
 elif game == 2:
     dice()
+elif game == 3:
+    rps()
