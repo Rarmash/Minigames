@@ -20,12 +20,6 @@ def rps():
         time.sleep(0.5)
         print(lang['three'] + "!")
         time.sleep(0.5)
-        if k.lower() == lang['rock']:
-            kk = 1
-        elif k.lower() == lang['scissors']:
-            kk = 2
-        elif k.lower() == lang['paper']:
-            kk = 3
         progchoice = random.randrange(1,3)
         if progchoice == 1:
             progword = lang['rock']
@@ -36,11 +30,11 @@ def rps():
         print('')
         print(lang['yourchoice'] + ": " + k.lower(), lang['mychoice'] + ': ' + progword, sep='\n')
         print('')
-        if kk == progchoice:
+        if k.lower() == progword:
             print(lang['draw'] + '!')
-        elif (kk == 1 and progchoice == 2) or (kk == 2 and progchoice == 3) or (kk == 3 and progchoice == 1):
+        elif (k.lower() == lang['rock'] and progword == lang['scissors']) or (k.lower() == lang['scissors'] and progword == lang['paper']) or (k.lower() == lang['paper'] and progword == lang['rock']):
             print(lang['win'] + '!')
-        elif (kk == 1 and progchoice == 3) or (kk == 2 and progchoice == 1) or (kk == 3 and progchoice == 2):
+        elif (k.lower() == lang['rock'] and progword == lang['paper']) or (k.lower() == lang['scissors'] and progword == lang['rock']) or (k.lower() == lang['paper'] and progword == lang['scissors']):
             print(lang['lose'] + '. :<')
         print(lang['rpsagain'])
         res = input()
