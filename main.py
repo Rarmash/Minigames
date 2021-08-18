@@ -1,12 +1,9 @@
 from configparser import ConfigParser
 from modules import localeCreate
-import os
 
 config = ConfigParser()
-path = "settings.ini"
 
-if os.path.exists('settings.ini') == False:
-    localeCreate.localeCreate(path)
+localeCreate.localeCreate('settings.ini')
 
 from modules.langSelect import lang
 
