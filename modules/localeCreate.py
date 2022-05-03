@@ -1,12 +1,15 @@
 import os
 from configparser import ConfigParser
+from modules.cmdClear import consoleClear
 
 config = ConfigParser()
 
 path = "settings.ini"
 
 def localeCreate(path):
+    consoleClear()
     if not os.path.exists(path):
+        config.add_section("LOCALE")
         print("Enter your language: English or Русский or Deutsch or Українська",sep='\n')
         qq = input()
         if qq in ["Русский", 'русский', 'russian', 'Russian']:

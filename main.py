@@ -6,6 +6,7 @@ config = ConfigParser()
 localeCreate.localeCreate('settings.ini')
 
 from modules.langSelect import lang
+from modules.cmdClear import consoleClear
 
 from minigames.guessthenumber import guess as guess
 from minigames.dice import dice as dice
@@ -19,3 +20,4 @@ elif game == 2:
     dice()
 elif game == 3:
     rps()
+consoleClear()

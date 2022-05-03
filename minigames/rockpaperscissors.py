@@ -1,17 +1,23 @@
 import random
 import time
 from modules.langSelect import lang
+from modules.cmdClear import consoleClear
+
 def rps():
+    consoleClear()
     d = 1
     a = 1
     while a != 0:
+        consoleClear()
         print(lang['start'])
         n = input()
         if n in ['Начать', 'начать', 'start', 'Start']:
             a = 0
     while d!=0:
+        consoleClear()
         print(lang['rpsstart'], end='\n')
         k = input()
+        consoleClear()
         print(lang['rpsgame'], end='\n')
         time.sleep(2)
         print(lang['one'])
@@ -28,6 +34,7 @@ def rps():
         if progchoice == 3:
             progword = lang['paper']
         print('')
+        consoleClear()
         print(lang['yourchoice'] + ": " + k.lower(), lang['mychoice'] + ': ' + progword, sep='\n')
         print('')
         if k.lower() == progword:
@@ -42,5 +49,6 @@ def rps():
             d = 1
         else:
             d = 0
+    consoleClear()
     print(lang['exit'])
     time.sleep(5)
